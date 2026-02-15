@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text-Polisher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1>Text-Polisher</h1>
+      <p class="sub">Paste text → choose a mode → get an improved version (side-by-side).</p>
+    </header>
+
+    <section class="controls">
+      <label class="label">
+        Mode
+        <select id="mode">
+          <option value="academic">Academic rewrite</option>
+          <option value="email">Professional email</option>
+          <option value="clarity">Clarity + conciseness</option>
+        </select>
+      </label>
+
+      <button id="polishBtn" class="btn">Polish (demo)</button>
+      <button id="clearBtn" class="btn btn-ghost">Clear</button>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">Original</div>
+        <textarea id="input" placeholder="Paste your text here..."></textarea>
+        <div class="hint" id="countHint">0 characters</div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">Improved</div>
+        <textarea id="output" placeholder="Your improved text will appear here..." readonly></textarea>
+        <div class="hint">
+          <button id="copyBtn" class="linkbtn">Copy improved text</button>
+          <span id="copyStatus" class="status"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="tiny">Public demo UI. Next step: connect the AI endpoint securely via Netlify Functions.</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
