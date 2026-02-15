@@ -1,0 +1,128 @@
+:root{
+  --bg:#0b1020;
+  --card:#121a33;
+  --card2:#0f1630;
+  --text:#e9ecf6;
+  --muted:#aab2d5;
+  --line:rgba(255,255,255,.10);
+  --btn:#2a67ff;
+  --btn2:#26304f;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: radial-gradient(1200px 800px at 20% 0%, #182456 0%, var(--bg) 55%);
+  color:var(--text);
+}
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px 18px 40px;
+}
+
+.header h1{
+  margin:0 0 8px 0;
+  font-size:34px;
+  letter-spacing:.2px;
+}
+.sub{margin:0 0 18px 0;color:var(--muted)}
+
+.controls{
+  display:flex;
+  gap:12px;
+  align-items:end;
+  flex-wrap:wrap;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background: rgba(18,26,51,.65);
+  backdrop-filter: blur(8px);
+  margin-bottom:14px;
+}
+
+.label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:13px}
+select{
+  background:var(--card2);
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 12px;
+  min-width:220px;
+}
+
+.btn{
+  border:0;
+  border-radius:12px;
+  padding:11px 14px;
+  background:var(--btn);
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn:hover{filter:brightness(1.05)}
+.btn-ghost{background:var(--btn2); color:var(--text); border:1px solid var(--line)}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+}
+@media (max-width: 900px){
+  .grid{grid-template-columns:1fr}
+}
+
+.panel{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background: rgba(18,26,51,.65);
+  backdrop-filter: blur(8px);
+  overflow:hidden;
+}
+
+.panel-head{
+  padding:12px 14px;
+  font-weight:700;
+  border-bottom:1px solid var(--line);
+  background: rgba(15,22,48,.9);
+}
+
+textarea{
+  width:100%;
+  min-height:360px;
+  padding:14px;
+  border:0;
+  outline:none;
+  resize:vertical;
+  background:transparent;
+  color:var(--text);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.hint{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:12px;
+}
+
+.linkbtn{
+  background:transparent;
+  border:0;
+  color:#9fb6ff;
+  cursor:pointer;
+  padding:0;
+  font-weight:600;
+}
+.linkbtn:hover{color:white}
+.status{opacity:.9}
+
+.footer{margin-top:12px;color:var(--muted)}
+.tiny{font-size:12px}
